@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ar" lang="ar" dir="rtl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>مكتب الغالي لتأجير السيارات - السيارات</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="myFunctions.js"></script>
+</head>
+<body>
+<div id="page">
+  <div id="header">
+    <h1>مكتب الغالي لتأجير السيارات</h1>
+    <ul id="menu">
+      <li><a href="home.html">الرئيسية</a></li>
+      <li><a href="AboutUs.html">من نحن</a></li>
+      <li><a href="Cars.html" class="active">السيارات</a></li>
+      <li><a href="#" id="exitLink">خروج</a></li>
+    </ul>
+  </div>
+  <div id="content">
+    <h2>السيارات المتوفرة للتأجير</h2>
+    <p>اضغط على مربع "إظهار التفاصيل" لرؤية معلومات السيارة، ثم اختر سيارة أو أكثر واضغط "متابعة".</p>
+
+    <form id="carsForm" action="#" method="post">
+      <fieldset>
+        <legend>جدول السيارات</legend>
+        <table id="carsTable">
+          <thead>
+            <tr>
+              <th>الرمز</th>
+              <th>الصورة</th>
+              <th>الموديل</th>
+              <th>سنة الصنع</th>
+              <th>السعر اليومي</th>
+              <th>إظهار التفاصيل</th>
+              <th>اختيار</th>
+            </tr>
+          </thead>
+          <tbody>
+                      <tr>
+            <td>CR-001</td>
+            <td><img src="images/car1.png" alt="BMW 320i" width="90" height="56" /></td>
+            <td class="model">BMW 320i</td>
+            <td>2023</td>
+            <td class="price">450000 ل.س</td>
+            <td>
+              <label for="show-1" class="hidden-label">إظهار تفاصيل BMW 320i</label>
+              <input type="checkbox" id="show-1" class="show-details" />
+            </td>
+            <td>
+              <label for="pick-1" class="hidden-label">اختيار BMW 320i</label>
+              <input type="checkbox" id="pick-1" name="cars" class="pick-car" value="CR-001" />
+            </td>
+          </tr>
+          <tr id="details-1" class="details-row">
+            <td colspan="7">
+              <ul>
+                <li>نوع الوقود: بنزين</li>
+                <li>ناقل الحركة: أوتوماتيك (8 سرعات)</li>
+                <li>عدد المقاعد: 5</li>
+                <li>عداد الكيلومترات: 45000 كم</li>
+                <li>اللون: أبيض</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>CR-002</td>
+            <td><img src="images/car2.png" alt="BMW X4" width="90" height="56" /></td>
+            <td class="model">BMW X4</td>
+            <td>2022</td>
+            <td class="price">500000 ل.س</td>
+            <td>
+              <label for="show-2" class="hidden-label">إظهار تفاصيل BMW X4</label>
+              <input type="checkbox" id="show-2" class="show-details" />
+            </td>
+            <td>
+              <label for="pick-2" class="hidden-label">اختيار BMW X4</label>
+              <input type="checkbox" id="pick-2" name="cars" class="pick-car" value="CR-002" />
+            </td>
+          </tr>
+          <tr id="details-2" class="details-row">
+            <td colspan="7">
+              <ul>
+                <li>نوع الوقود: ديزل</li>
+                <li>ناقل الحركة: أوتوماتيك (8 سرعات)</li>
+                <li>عدد المقاعد: 5</li>
+                <li>عداد الكيلومترات: 62000 كم</li>
+                <li>اللون: رمادي</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>CR-003</td>
+            <td><img src="images/car3.png" alt="BMW 520i" width="90" height="56" /></td>
+            <td class="model">BMW 520i</td>
+            <td>2024</td>
+            <td class="price">650000 ل.س</td>
+            <td>
+              <label for="show-3" class="hidden-label">إظهار تفاصيل BMW 520i</label>
+              <input type="checkbox" id="show-3" class="show-details" />
+            </td>
+            <td>
+              <label for="pick-3" class="hidden-label">اختيار BMW 520i</label>
+              <input type="checkbox" id="pick-3" name="cars" class="pick-car" value="CR-003" />
+            </td>
+          </tr>
+          <tr id="details-3" class="details-row">
+            <td colspan="7">
+              <ul>
+                <li>نوع الوقود: بنزين (هجين خفيف)</li>
+                <li>ناقل الحركة: أوتوماتيك (8 سرعات)</li>
+                <li>عدد المقاعد: 5</li>
+                <li>عداد الكيلومترات: 12000 كم</li>
+                <li>اللون: أزرق</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>CR-004</td>
+            <td><img src="images/car4.png" alt="BMW M4 Competition" width="90" height="56" /></td>
+            <td class="model">BMW M4 Competition</td>
+            <td>2021</td>
+            <td class="price">600000 ل.س</td>
+            <td>
+              <label for="show-4" class="hidden-label">إظهار تفاصيل BMW M4 Competition</label>
+              <input type="checkbox" id="show-4" class="show-details" />
+            </td>
+            <td>
+              <label for="pick-4" class="hidden-label">اختيار BMW M4 Competition</label>
+              <input type="checkbox" id="pick-4" name="cars" class="pick-car" value="CR-004" />
+            </td>
+          </tr>
+          <tr id="details-4" class="details-row">
+            <td colspan="7">
+              <ul>
+                <li>نوع الوقود: بنزين</li>
+                <li>ناقل الحركة: أوتوماتيك (8 سرعات)</li>
+                <li>عدد المقاعد: 4</li>
+                <li>عداد الكيلومترات: 98000 كم</li>
+                <li>اللون: رمادي</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td>CR-005</td>
+            <td><img src="images/car5.png" alt="BMW M5 E60" width="90" height="56" /></td>
+            <td class="model">BMW M5 E60</td>
+            <td>2008</td>
+            <td class="price">380000 ل.س</td>
+            <td>
+              <label for="show-5" class="hidden-label">إظهار تفاصيل BMW M5 E60</label>
+              <input type="checkbox" id="show-5" class="show-details" />
+            </td>
+            <td>
+              <label for="pick-5" class="hidden-label">اختيار BMW M5 E60</label>
+              <input type="checkbox" id="pick-5" name="cars" class="pick-car" value="CR-005" />
+            </td>
+          </tr>
+          <tr id="details-5" class="details-row">
+            <td colspan="7">
+              <ul>
+                <li>نوع الوقود: بنزين (V10)</li>
+                <li>ناقل الحركة: نصف أوتوماتيك SMG (7 سرعات)</li>
+                <li>عدد المقاعد: 5</li>
+                <li>عداد الكيلومترات: 120000 كم</li>
+                <li>اللون: أحمر</li>
+              </ul>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <p>
+          <input type="button" id="continueBtn" value="متابعة" />
+          <span id="carsMsg" class="error"></span>
+        </p>
+      </fieldset>
+    </form>
+
+    <div id="bookingBox">
+      <form id="bookingForm" action="#" method="post">
+        <fieldset>
+          <legend>نموذج طلب الحجز</legend>
+          <p id="selectedCars"></p>
+          <span id="errCars" class="error"></span>
+
+          <div class="row">
+            <label for="fullName">الاسم الكامل (أحرف عربية فقط):</label><br />
+            <input type="text" id="fullName" name="fullName" maxlength="60" />
+            <span id="errName" class="error"></span>
+          </div>
+
+          <div class="row">
+            <label for="nationalId">الرقم الوطني (11 خانة) *:</label><br />
+            <input type="text" id="nationalId" name="nationalId" maxlength="11" />
+            <span id="errNationalId" class="error"></span>
+          </div>
+
+          <div class="row">
+            <label for="startDate">تاريخ بداية التأجير *:</label>
+            <span class="hint">(yyyy-mm-dd مثال: 2026-11-20)</span><br />
+            <input type="text" id="startDate" name="startDate" maxlength="10" />
+            <span id="errStartDate" class="error"></span>
+          </div>
+
+          <div class="row">
+            <label for="endDate">تاريخ نهاية التأجير *:</label>
+            <span class="hint">(yyyy-mm-dd مثال: 2026-11-30)</span><br />
+            <input type="text" id="endDate" name="endDate" maxlength="10" />
+            <span id="errEndDate" class="error"></span>
+          </div>
+
+          <div class="row">
+            <label for="mobile">رقم الموبايل (Syriatel أو MTN):</label><br />
+            <input type="text" id="mobile" name="mobile" maxlength="10" />
+            <span id="errMobile" class="error"></span>
+          </div>
+
+          <div class="row">
+            <label for="email">البريد الإلكتروني:</label><br />
+            <input type="text" id="email" name="email" maxlength="80" />
+            <span id="errEmail" class="error"></span>
+          </div>
+
+          <div class="row">
+            <span>طريقة الاستلام:</span><br />
+            <input type="radio" id="pickupBranch" name="pickup" value="branch" checked="checked" />
+            <label for="pickupBranch">من الفرع</label>
+            <input type="radio" id="pickupDelivery" name="pickup" value="delivery" />
+            <label for="pickupDelivery">توصيل إلى العنوان</label>
+          </div>
+
+
+          <p class="hint">* الحقول المعلَّمة بنجمة إلزامية، وباقي الحقول يمكن تركها فارغة.</p>
+          <p>
+            <input type="submit" id="sendBtn" value="إرسال" />
+            <input type="reset" value="مسح" />
+          </p>
+        </fieldset>
+      </form>
+    </div>
+
+    <div id="overlay">
+      <div id="resultBox">
+        <h3>ملخص طلب الحجز</h3>
+        <div id="resultBody"></div>
+        <p><input type="button" id="closeResult" value="إغلاق" /></p>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <p>مكتب الغالي  لتأجير السيارات - جميع الحقوق محفوظة 2026</p>
+  </div>
+</div>
+</body>
+</html>

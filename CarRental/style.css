@@ -1,0 +1,195 @@
+/* ===== style.css : ملف التنسيق الوحيد لكل صفحات الموقع ===== */
+
+/* 1) الخط (النوع والحجم) من مكان واحد */
+body {
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 16px;
+  color: #222222;
+  background-color: #222222;
+  background-image: linear-gradient(135deg, #16588e, #222222 55%, #e7222e);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+}
+
+/* عناصر النماذج لا ترث الخط تلقائياً، لذلك نجبرها على الوراثة */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+h1 { font-size: 1.8em; margin: 0; }
+h2 { font-size: 1.4em; color: #222222; border-right: 5px solid #d32f2f; padding-right: 10px; }
+h3 { font-size: 1.15em; }
+
+/* 2) لون وشكل عناصر الإدخال النصية من مكان واحد */
+input[type="text"], textarea {
+  background-color: #fffbe6;
+  color: #1a1a1a;
+  border: 1px solid #7a8da6;
+  border-radius: 4px;
+  padding: 6px 8px;
+  width: 260px;
+}
+input[type="text"]:focus, textarea:focus {
+  background-color: #e6f2ff;
+  outline: none;
+}
+
+/* هيكل الصفحة */
+#page {
+  max-width: 1000px;
+  margin: 0 auto;
+background-color: rgba(255, 255, 255, 0.75);
+  min-height: 100vh;
+}
+#header {
+  background-color: #222222;
+background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.7)), url("images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  padding: 15px 20px 0 20px;
+}
+#header h1 {
+  display: table;
+  margin: 0 auto;
+  padding: 25px 0 10px 0;
+  font-size: 1.5em;
+  color: #ffffff;
+  letter-spacing: 0;
+  border-bottom: 3px solid #d32f2f;
+  text-shadow: 2px 2px 8px #000000;
+}
+#content { padding: 20px; }
+#footer {
+  background-color: #222222;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin-top: 30px;
+}
+#footer p { margin: 0; }
+
+/* قائمة التنقل */
+#menu {
+  list-style: none;
+  margin: 15px 0 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+#menu li { float: right; margin-left: 4px; }
+#menu a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 6px 6px 0 0;
+}
+#menu a:hover { background-color: #444444; }
+/* الصفحة الحالية تظهر باللون الأحمر */
+#menu a.active { background-color: #d32f2f; color: #ffffff; }
+
+/* الجداول */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 10px 0;
+}
+th {
+  background-color: #1c69d4;
+  color: #ffffff;
+  padding: 10px;
+  border: 1px solid #1250a0;
+}
+td {
+  padding: 8px;
+  border: 1px solid #b4c3dc;
+  text-align: center;
+}
+tbody tr:hover { background-color: #eaf1fb; }
+
+/* صفوف التفاصيل: مخفية في البداية ويظهرها jQuery */
+.details-row { display: none; }
+.details-row td {
+  background-color: #f7f9fc;
+  text-align: right;
+}
+.details-row ul { margin: 0; padding-right: 20px; }
+
+/* النماذج */
+fieldset {
+  border: 1px solid #7a8da6;
+  border-radius: 6px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+legend {
+  font-weight: bold;
+  color: #1c69d4;
+  padding: 0 8px;
+}
+.row { margin-bottom: 14px; }
+.hint { color: #666666; font-size: 0.85em; }
+.error {
+  display: block;
+  color: #b00020;
+  font-size: 0.9em;
+  min-height: 1.1em;
+}
+.hidden-label {
+  position: absolute;
+  left: -9999px;
+}
+
+/* الأزرار */
+input[type="button"], input[type="submit"], input[type="reset"] {
+  background-color: #1c69d4;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 26px;
+  cursor: pointer;
+}
+input[type="button"]:hover, input[type="submit"]:hover { background-color: #1250a0; }
+input[type="reset"] { background-color: #888888; }
+
+/* صندوق الحجز المخفي في البداية */
+#bookingBox { display: none; }
+
+/* نافذة النتيجة */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55);
+  z-index: 100;
+}
+#resultBox {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 620px;
+  margin: 60px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+.result-line { font-weight: bold; }
+.final-amount { color: #0a7a2f; font-size: 1.2em; font-weight: bold; }
+#bookingBox fieldset {
+  border-width: 6px 1px 1px 1px;
+  border-style: solid;
+  border-image: linear-gradient(to left, #81c4ff, #16588e, #e7222e) 1;
+  background-image: linear-gradient(135deg, #eaf4ff, #ffffff 50%, #fdeaea);
+  table, fieldset {
+  background-color: #ffffff;
+}
+
+#carsTable img {
+  width: 120px;
+  height: 75px;
+  object-fit: cover;
+}
+}
